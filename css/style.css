@@ -1,0 +1,385 @@
+/* ==================================================
+   RESET: Remove formatação padrão do navegador
+   ================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+
+/* ==================================================
+   VARIÁVEIS: Cores e valores padrão do site
+   ================================================== */
+:root {
+    --cor-fundo: #f8f4f0;
+    --cor-texto: #333333;
+    --cor-destaque: #6b8e8e;
+    --cor-auxiliar: #a67c7c;
+    --cor-clara: #ffffffcc;
+    --sombra: 0 4px 12px rgba(0, 0, 0, 0.06);
+    --raio: 14px;
+    --espaco: 1.8rem;
+}
+
+
+/* ==================================================
+   CORPO DO SITE: Estilo geral de fundo e fonte
+   ================================================== */
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: var(--cor-texto);
+    font-weight: 600;
+    line-height: 1.7;
+    letter-spacing: 0.2px;
+
+    background: linear-gradient(180deg, #e6eff7 0%, #f0ebe4 45%, #f8f4f0 100%);
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+
+/* ==================================================
+   CONTAINER: Centraliza e limita a largura do conteúdo
+   ================================================== */
+.container {
+    width: 92%;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+
+/* ==================================================
+   CABEÇALHO: Faixa superior com título e menu
+   ================================================== */
+header {
+    background: linear-gradient(135deg,
+            rgba(107, 142, 142, 0.12),
+            /* Mais transparente → não atrapalha o texto */
+            rgba(136, 168, 168, 0.18)),
+        url('../imagens/psicologia2.jpeg');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding: 2.2rem 0 3.2rem;
+    text-align: center;
+}
+
+/* ✅ CAIXA VIDRO CINZA ESCURO — Título e Subtítulo */
+header .caixa-texto {
+    display: inline-block;
+    padding: 1.4rem 2.8rem;
+    margin-bottom: 1.2rem;
+    background: rgba(35, 40, 45, 0.55);
+    /* Cinza escuro transparente */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 18px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Título — Mais escuro → MÁXIMA VISIBILIDADE */
+header h1 {
+    font-size: 1.9rem;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    color: #3d2b24;
+    /* ✅ Marrom BEM mais escuro e forte */
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
+    /* ✅ Sombra clara suave → destaca mais */
+}
+
+/* Subtítulo — Mais escuro e legível */
+.subtitulo {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+    color: #5a4036;
+    /* ✅ Marrom médio, bem visível */
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+    /* ✅ Destaque leve */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 5.0rem;
+    /* ✅ AUMENTE este número → desce os botões! */
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 8px 16px;
+    /* ✅ Menos altura → botões menores */
+    margin: 4px;
+    background: rgba(45, 58, 58, 0.75);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 24px;
+    font-weight: 600;
+    font-size: 0.88rem;
+    /* ✅ Fonte menor → botões mais compactos */
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 3px 12px rgba(45, 58, 58, 0.25);
+}
+
+nav ul li a:hover {
+    background: rgba(30, 42, 42, 0.85);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 18px rgba(30, 42, 42, 0.35);
+}
+
+
+/* ==================================================
+   SEÇÕES: Estilo de cada bloco de conteúdo
+   ================================================== */
+.secao {
+    padding: var(--espaco) 0;
+}
+
+.secao h2 {
+    color: var(--cor-destaque);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 2px solid rgba(107, 142, 142, 0.18);
+    font-weight: 800;
+    letter-spacing: 0.3px;
+}
+
+.secao p {
+    margin-bottom: 0.9rem;
+    font-size: 1.02rem;
+    font-weight: 600;
+    line-height: 1.7;
+}
+
+.secao.clara {
+    background-color: var(--cor-clara);
+    border-radius: var(--raio);
+    margin: 1rem auto;
+    padding: var(--espaco);
+    box-shadow: var(--sombra);
+}
+
+.secao.destaque {
+    background: linear-gradient(120deg, #f0e9e6, #f6f0ed);
+    border-radius: var(--raio);
+    padding: var(--espaco);
+    box-shadow: var(--sombra);
+}
+
+.lista-apoio {
+    list-style: none;
+    margin-top: 0.8rem;
+}
+
+.lista-apoio li {
+    padding: 0.45rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+    border-bottom: 1px dashed rgba(107, 142, 142, 0.12);
+}
+
+
+/* ==================================================
+   BOTÕES DE CONTATO
+   ================================================== */
+.contatos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    margin-top: 1.1rem;
+}
+
+.botao {
+    display: inline-block;
+    padding: 12px 22px;
+    margin: 8px 6px;
+    background: rgba(45, 58, 58, 0.75);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 24px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 3px 12px rgba(45, 58, 58, 0.25);
+}
+
+.botao:hover {
+    background: rgba(30, 42, 42, 0.85);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 18px rgba(30, 42, 42, 0.35);
+}
+
+.botao-agenda {
+    background: linear-gradient(135deg, #6b8e8e, #5a7a7a);
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(107, 142, 142, 0.25);
+}
+
+.botao-agenda:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(107, 142, 142, 0.35);
+}
+
+
+/* ==================================================
+   RODAPÉ
+   ================================================== */
+footer {
+    text-align: center;
+    padding: 1.4rem;
+    font-size: 0.92rem;
+    color: #777;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+
+/* ==================================================
+   CHATBOT: Botão flutuante e caixa de conversa
+   ================================================== */
+#chatbot-botao {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 60px;
+    height: 60px;
+    background: rgba(30, 42, 42, 0.70);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    cursor: pointer;
+    box-shadow: 0 4px 22px rgba(30, 42, 42, 0.40);
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+#chatbot-botao:hover {
+    background: rgba(45, 58, 58, 0.75);
+    transform: scale(1.1);
+}
+
+#chatbot-caixa {
+    position: fixed;
+    bottom: 96px;
+    right: 24px;
+    width: 340px;
+    max-width: 92vw;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    z-index: 998;
+    overflow: hidden;
+    display: none;
+}
+
+#chatbot-cabecalho {
+    background: linear-gradient(135deg, #6b8e8e, #5a7a7a);
+    color: #fff;
+    padding: 14px;
+    font-weight: 700;
+    text-align: center;
+}
+
+#chatbot-mensagens {
+    height: 280px;
+    overflow-y: auto;
+    padding: 14px;
+    background: #faf8f6;
+}
+
+.mensagem {
+    margin-bottom: 12px;
+    padding: 10px 14px;
+    border-radius: 18px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.mensagem.bot {
+    background: #eef4f8;
+    color: #444;
+    border-bottom-left-radius: 4px;
+}
+
+#chatbot-opcoes {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: #fff;
+    border-top: 1px solid #eee;
+}
+
+#chatbot-opcoes button {
+    padding: 10px 14px;
+    background: #f0ebe4;
+    color: #444;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: left;
+    transition: background 0.2s ease;
+}
+
+#chatbot-opcoes button:hover {
+    background: #e6d9ce;
+}
+
+
+/* ==================================================
+   RESPONSIVIDADE: Ajustes para telas menores
+   ================================================== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.55rem;
+    }
+
+    nav ul {
+        gap: 0.5rem;
+    }
+
+    nav a {
+        font-size: 0.88rem;
+        padding: 0.35rem 0.75rem;
+    }
+
+    .secao h2 {
+        font-size: 1.3rem;
+    }
+
+    .botao {
+        flex: 1 1 42%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .botao {
+        flex: 1 1 100%;
+    }
+
+    :root {
+        --espaco: 1.2rem;
+    }
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 🔒 Segurança ajustada: protege o site sem bloquear o chatbot -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self';
+        script-src 'self' 'unsafe-inline';
+        style-src 'self' 'unsafe-inline';
+        img-src 'self' data: https:;
+        font-src 'self' data:;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <title>**Aline Vargas da Silva - Psicologia**</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Aline Vargas da Silva - Psicologia & Bem Estar</h1>
+            <p class="subtitulo">Acolhimento, escuta e cuidado com a sua saúde mental</p>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre o Trabalho</a></li>
+                    <li><a href="#entresessoes">Entre Sessões</a></li>
+                    <li><a href="#quatromais">40+ Sem Manual</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="secao">
+            <div class="container">
+                <h2>Bem-vindo(a)</h2>
+                <p>Sou psicóloga clínica, Especialista em Saúde da Família e Comunidade pelo Programa de Residência
+                    Multiprofissional do Grupo Hospitalar Conceição. Pós-Graduada em Terapia Cognitivo-Comportamental
+                    pela Universidade Uninter. Acredito em uma psicologia acolhedora, sem julgamentos e que busque
+                    resgatar o potencial de cada indivíduo.</p>
+            </div>
+        </section>
+
+        <section id="sobre" class="secao clara">
+            <div class="container">
+                <h2>Sobre o Trabalho</h2>
+                <p>Atuação baseada em evidências e em uma relação de confiança e respeito. O atendimento é pensado para
+                    acolher cada pessoa em sua totalidade, respeitando seu tempo e sua história.</p>
+                <p>O foco é oferecer suporte emocional, ferramentas de autoconhecimento e estratégias para lidar com
+                    desafios da vida, promovendo mais equilíbrio e qualidade de vida.</p>
+            </div>
+        </section>
+
+        <section id="entresessoes" class="secao">
+            <div class="container">
+                <h2>Entre Sessões...</h2>
+                <p>É um espaço de reflexão sobre psicologia clínica, e os encontros que transformam.</p>
+                <ul class="lista-apoio">
+                    <li>Psicologia na prática</li>
+                    <li>Estudos, supervisão e formação</li>
+                    <li>Reflexões sobre o fazer clínico</li>
+                    <li>Cuidado com quem cuida</li>
+                </ul>
+                <p>Porque, entre uma sessão e outra, também há muito a pensar.</p>
+            </div>
+        </section>
+
+        <section id="quatromais" class="secao destaque">
+            <div class="container">
+                <h2>Terapia Especializada - 40+ Sem Manual</h2>
+                <p>É um espaço para falar sobre a vida adulta depois dos 40 — com leveza, informação e um olhar crítico
+                    sobre o mundo. Aqui entram trabalho, carreira, relacionamentos, saúde mental, cultura, literatura,
+                    escolhas, recomeços e aquelas questões que aparecem quando percebemos que a vida não vem com
+                    instruções. Porque chegar aos 40+ não significa ter todas as respostas. Significa fazer novas
+                    perguntas — e descobrir que ainda há muita vida pela frente.</p>
+                <p>Atendimento focado em:</p>
+                <ul class="lista-apoio">
+                    <li>Transições da meia-idade e autoconhecimento</li>
+                    <li>Menopausa e saúde emocional</li>
+                    <li>Carreira, família e redefinindo prioridades</li>
+                    <li>Reinvenção de projetos e identidade</li>
+                    <li>Relacionamentos e autonomia</li>
+                    <li>Autoestima e autocuidado</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contato" class="secao clara">
+            <div class="container">
+                <h2>Contato</h2>
+                <p>Entre em contato para mais informações ou agendar seu atendimento.</p>
+                <div class="contatos">
+                    <a href="" target="_blank" rel="noopener noreferrer" class="botao">💬 WhatsApp</a>
+                    <a href="" target="_blank" rel="noopener noreferrer" class="botao">📸 Entre Sessões</a>
+                    <a href="" target="_blank" rel="noopener noreferrer" class="botao">📖 40+ Sem Manual</a>
+                    <a href="e-mail" class="botao">✉️ E-mail</a>
+                    <a href="tel:" class="botao">📞 Telefone</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 - Psicologia & Bem-Estar. Todos os direitos reservados.</p>
+            <p>&copy; 2026 - Psicóloga Aline Vargas da Silva - CRP: 07/27885</p>
+            <p>&copy; 2026 - Site criado por Leekhan. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- CHATBOT - Botão e Caixa -->
+    <div id="chatbot-botao" onclick="alternarChat()">💬</div>
+
+    <div id="chatbot-caixa" style="display: none;">
+        <div id="chatbot-cabecalho">Atendimento - Entre Sessões</div>
+        <div id="chatbot-mensagens">
+            <p class="mensagem bot">Olá! Como posso ajudar? Escolha uma opção abaixo:</p>
+        </div>
+        <div id="chatbot-opcoes">
+            <button onclick="responder('atendimento')">Como funciona o atendimento?</button>
+            <button onclick="responder('agendar')">Como agendar uma consulta?</button>
+            <button onclick="responder('valores')">Valores e pagamento</button>
+            <button onclick="responder('local')">Atendimento presencial ou online?</button>
+            <button onclick="responder('falar')">Falar diretamente com a profissional</button>
+        </div>
+    </div>
+
+    <!-- ⬆️ BOTÃO VOLTAR AO TOPO -->
+    <button id="voltarTopo" onclick="window.scrollTo({top:0,behavior:'smooth'})"
+        style="display:none;position:fixed;top:18px;left:50%;transform:translateX(-50%);width:50px;height:50px;background:linear-gradient(135deg,#6b8e8e,#5a7a7a);color:#fff;border:none;border-radius:50%;font-size:20px;cursor:pointer;box-shadow:0 4px 12px rgba(107,142,142,0.3);z-index:997;transition:all 0.3s ease;">⬆️</button>
+
+    <!-- Código que faz funcionar (direto na página) -->
+    <script>
+        function alternarChat() {
+            const caixa = document.getElementById('chatbot-caixa');
+            if (caixa.style.display === 'block') {
+                caixa.style.display = 'none';
+            } else {
+                caixa.style.display = 'block';
+            }
+        }
+
+        function responder(opcao) {
+            const caixa = document.getElementById('chatbot-mensagens');
+            if (!caixa) return;
+
+            let texto = '';
+            switch (opcao) {
+                case 'atendimento':
+                    texto = 'O atendimento é personalizado, com escuta acolhedora e sigilo total. As sessões duram cerca de 50 minutos, com atendimento online.';
+                    break;
+                case 'agendar':
+                    texto = 'Você pode escolher o melhor horário diretamente pela nossa agenda online. Quando sua conta no Cal.com estiver pronta, o link será colocado aqui.';
+                    break;
+                case 'valores':
+                    texto = 'Os valores serão combinados no primeiro contato. Por favor, entre em contato pelo WhatsApp para mais informações.';
+                    break;
+                case 'local':
+                    texto = 'Atendimento online de qualquer lugar do Brasil por videoconferência. Você escolhe o que melhor se adapta à sua rotina.';
+                    break;
+                case 'falar':
+                    texto = 'Você pode falar diretamente comigo pelo WhatsApp: 💬 Abrir WhatsApp → ';
+                    break;
+            }
+
+            // ✅ Método SEGURO (sem innerHTML)
+            const p = document.createElement('p');
+            p.className = 'mensagem bot';
+            p.textContent = texto;
+            caixa.appendChild(p);
+            caixa.scrollTop = caixa.scrollHeight;
+        }
+
+        // ⬆️ Mostra/esconde botão Voltar ao Topo ao rolar a página
+        window.addEventListener('scroll', function () {
+            const botao = document.getElementById('voltarTopo');
+            if (window.scrollY > 300) {
+                botao.style.display = 'block';
+            } else {
+                botao.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>
